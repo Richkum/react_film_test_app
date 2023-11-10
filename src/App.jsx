@@ -14,6 +14,8 @@ const movie1 = {
   imdbID: "tt2975590",
 };
 
+let data;
+data = 3;
 function App() {
   const [movies, setMovies] = useState([]);
   const [serachTerm, setSearchTerm] = useState("");
