@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import reactLogo from "./assets/react.svg";
 import MovieCard from "./Movie";
+import SearchIcon from "./assets/search.svg";
 import "./App.css";
 
 const api_url = "http://www.omdbapi.com?apikey=cc1540e7";
@@ -24,7 +25,7 @@ function App() {
     setMovies(data.Search);
   };
   useEffect(() => {
-    searchMovies("spiderman");
+    searchMovies();
   }, []);
   return (
     <div className="app">
@@ -38,7 +39,7 @@ function App() {
           onChange={(e) => setSearchTerm(e.target.value)}
         />
         <img
-          src={reactLogo}
+          src={SearchIcon}
           alt="search"
           onClick={() => searchMovies(serachTerm)}
         />
